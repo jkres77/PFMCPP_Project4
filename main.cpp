@@ -274,7 +274,7 @@ FloatType& FloatType::divide(float rhs)
 {
     if (rhs == 0.0f)
     {
-        std::cout << "warning: floating point division by zero!" << std::endl;
+        std::cout << "warning: \nfloating point division by zero!" << std::endl;
     } 
     *value /= rhs;
     return *this;
@@ -371,7 +371,8 @@ DoubleType& DoubleType::divide(double rhs)
     if (rhs == 0.0)
     {
         std::cout << "warning: \nfloating point division by zero!" << std::endl;
-    } *value / rhs; FIXME: curly braces go on their own line
+    } 
+    *value /= rhs;
     return *this;
 }
 
@@ -465,8 +466,10 @@ IntType& IntType::divide(int rhs)
 {
     if (rhs == 0)
     {
-        std::cout << "error: \ninteger division by zero is an error an will crash the program!" << std::endl;
-    } *value /= rhs; FIXME: curly braces go on their own line and you need to prevent division by 0.
+        std::cout << "error: \ninteger division by zero is an error and will crash the program!" << std::endl;
+        return *this;
+    } 
+    *value /= rhs;
     return *this;
 }
 
